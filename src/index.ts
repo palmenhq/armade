@@ -1,4 +1,5 @@
 export * from './modules/add'
+export * from './modules/always'
 export * from './modules/compose'
 export * from './modules/filter'
 export * from './modules/identity'
