@@ -7,7 +7,7 @@ export const prop = <
 >(
   key: K,
 ) => (obj: TObject): TObject[K] => {
-  if (obj !== undefined && obj !== null && typeof obj === 'object') {
+  if (typeof obj === 'object') {
     return obj[key]
   }
 
