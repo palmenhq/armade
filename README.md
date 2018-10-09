@@ -8,7 +8,7 @@ map(square)([1, 2, 3]) // yes
 map(square, [1, 2, 3]) // NO! Will give a TS error if you're using typescript, or not do anything if you are using JS
 ```
 
-Why? To keep the API as simple as straightforward as possible, and to keep the library size down.
+Why? To keep the API as straightforward as possible, and to keep the library size down.
 
 ## Installation
 
@@ -19,7 +19,7 @@ Why? To keep the API as simple as straightforward as possible, and to keep the l
 See [complete docs](#docs) for all functions, but here's an example:
 
 ```typescript
-import { append, map, pipe } from 'ramadish' // or from "ramadish/es" if your bundle doesn't detect es modules by itself
+import { append, map, pipe } from 'ramadish' // or from "ramadish/es" if your bundler doesn't detect es modules by itself
 
 const myList = [1, 2, 3]
 const square = (x: number) => x * x
