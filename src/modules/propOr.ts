@@ -1,3 +1,5 @@
+import { isNil } from './isNil'
+import { not } from './not'
 import { prop } from './prop'
 
 export const propOr = <
@@ -11,11 +13,7 @@ export const propOr = <
   alternative: TAlternative,
   key: K,
 ) => (obj: TObject): TObject[K] | TAlternative => {
-  if (typeof obj !== 'object') {
-    return alternative
-  }
-
-  if (!obj.hasOwnProperty(key)) {
+  if (not(isNil(obj)) && isNil(obj[key])) {
     return alternative
   }
 

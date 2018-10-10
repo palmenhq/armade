@@ -29,3 +29,8 @@ it("doesn't 💥 when trying to get path of a non-object", () => {
   const notAnObj = { foo: 'hello' }
   expect(path(['foo', 'bar'])(notAnObj)).toBe(undefined)
 })
+
+it('gets properties of non-objects', () => {
+  const obj = { foo: { bar: 'baz' } }
+  expect(path(['foo', 'bar', 'length'])(obj)).toBe(3)
+})
