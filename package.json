@@ -1,4 +1,5 @@
 {
+  "name": "ramdaish",
   "dependencies": {},
   "scripts": {
     "build:cjs": "tsc --module commonjs --outDir ./dist",
@@ -32,6 +33,8 @@
       "git add"
     ]
   },
-  "main": "dist/index.js",
-  "module": "es/index.js"
+  "main": "./dist/index.js",
+  "module": "./es/index.js",
+  "types": "./dist",
+  "sideEffects": false
 }
