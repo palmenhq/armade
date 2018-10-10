@@ -23,8 +23,8 @@ it("gets path alternative when prop doesn't exist", () => {
   expect(result).toBe('expected')
 })
 
-it("doesn't get prop when its undefined", () => {
+it('gets alternative when prop is undefined', () => {
   const obj = { foo: undefined }
-  const result = pathOr('nope', ['foo'])(obj)
-  expect(result).toBe(undefined)
+  const result = pathOr('bar', ['foo'])(obj)
+  expect(result).toBe('bar')
 })

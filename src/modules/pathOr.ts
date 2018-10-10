@@ -1,3 +1,5 @@
+import { isNil } from './isNil'
+import { not } from './not'
 import { PathKey, PathObject } from './path'
 
 export interface PathOr {
@@ -151,10 +153,7 @@ export const pathOr: PathOr = (alternative: any, pathArray: any[]) => (
       return KEY_MISSING
     }
 
-    if (
-      typeof currentValue === 'object' &&
-      currentValue.hasOwnProperty(pathKey)
-    ) {
+    if (not(isNil(currentValue)) && not(isNil(currentValue[pathKey]))) {
       return currentValue[pathKey]
     }
 

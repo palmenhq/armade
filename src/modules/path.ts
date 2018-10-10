@@ -1,3 +1,6 @@
+import { isNil } from './isNil'
+import { not } from './not'
+
 export interface PathObject {
   [stringKey: string]: any
   [numberKey: number]: any
@@ -124,7 +127,10 @@ export const path: Path = (pathArray: Array<string | number>) => (
   object: any,
 ) =>
   pathArray.reduce((previousValue, currentPathKey) => {
-    if (typeof previousValue === 'object') {
+    if (
+      not(isNil(previousValue)) &&
+      not(isNil(previousValue[currentPathKey]))
+    ) {
       return previousValue[currentPathKey]
     }
 

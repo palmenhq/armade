@@ -1,3 +1,6 @@
+import { isNil } from './isNil'
+import { not } from './not'
+
 export const prop = <
   TObject extends {
     [stringKey: string]: any
@@ -7,7 +10,7 @@ export const prop = <
 >(
   key: K,
 ) => (obj: TObject): TObject[K] => {
-  if (typeof obj === 'object') {
+  if (not(isNil(obj))) {
     return obj[key]
   }
 

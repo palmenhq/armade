@@ -27,3 +27,7 @@ it('works on arrays', () => {
 
   expect(prop(0)(obj)).toBe('foo')
 })
+
+it('gets prop from non-object', () => {
+  expect(prop('length')('foo')).toBe(3)
+})
