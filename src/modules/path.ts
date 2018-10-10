@@ -1,5 +1,5 @@
-import { not } from './not'
 import { isNil } from './isNil'
+import { not } from './not'
 
 export interface PathObject {
   [stringKey: string]: any

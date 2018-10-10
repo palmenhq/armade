@@ -1,6 +1,6 @@
-import { PathKey, PathObject } from './path'
 import { isNil } from './isNil'
 import { not } from './not'
+import { PathKey, PathObject } from './path'
 
 export interface PathOr {
   <TAlternative, TObject extends PathObject, K1 extends PathKey<TObject>>(
