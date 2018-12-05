@@ -1,5 +1,5 @@
 {
-  "name": "ramdaish",
+  "name": "armade",
   "dependencies": {},
   "scripts": {
     "build:cjs": "tsc --module commonjs --outDir ./dist",

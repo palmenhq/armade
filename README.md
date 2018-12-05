@@ -1,6 +1,6 @@
-# ramadish
+# armade
 
-Ramadish is a ramda-ish alternative. It is, however, NOT a drop-in replacement. There are some main differences - i.e. all functions are curried, and ramadish doesn't provide an alternative where you can pass the normally curried parameter as an extra parameter in the outer function call. Example:
+armade is a ramda-ish alternative. It is, however, NOT a drop-in replacement. There are some main differences - i.e. all functions are curried, and armade doesn't provide an alternative where you can pass the normally curried parameter as an extra parameter in the outer function call. Example:
 
 ```typescript
 const square = (x: number) => x * x
@@ -12,14 +12,14 @@ Why? To keep the API as straightforward as possible, and to keep the library siz
 
 ## Installation
 
-`npm i ramadish` or `yarn add ramadish`
+`npm i armade` or `yarn add armade`
 
 ## Usage
 
 See [complete docs](#docs) for all functions, but here's an example:
 
 ```typescript
-import { append, map, pipe } from 'ramadish' // or from "ramadish/es" if your bundler doesn't detect es modules by itself
+import { append, map, pipe } from 'armade' // or from "armade/es" if your bundler doesn't detect es modules by itself
 
 const myList = [1, 2, 3]
 const square = (x: number) => x * x
@@ -34,15 +34,15 @@ doStuff(myList) // [1, 4, 9, 16]
 
 ## Sane TS definitions
 
-Ramadish is written TypeScript-first, so it comes with sane TypeScript definitions out of the box. No need to install extra packages, and there will never be discrepancies between the real world and the types. Good stuff.
+armade is written TypeScript-first, so it comes with sane TypeScript definitions out of the box. No need to install extra packages, and there will never be discrepancies between the real world and the types. Good stuff.
 
 ## Tree shakable
 
-Ramadish comes with esmodules out of the box, meaning it's tree shakable. `package.json` declares the `modules` field, so your favourite bundle _should_ be able to find the esmodules automagically. But just in case it doesn't esmodules lives under `ramadish/es`, while CJS lives under `ramadish/dist` and is ofc declared as `main`.
+armade comes with esmodules out of the box, meaning it's tree shakable. `package.json` declares the `modules` field, so your favourite bundle _should_ be able to find the esmodules automagically. But just in case it doesn't esmodules lives under `armade/es`, while CJS lives under `armade/dist` and is ofc declared as `main`.
 
 ## Key differences to ramda
 
-Apart from curried-only functions (described in the introduction), ramadish is still under development and some functions will be missing. Feel free to open an issue if your favourite utility isn't in here yet! However the goal isn't, as described, to be a drop-in replacement for ramda. In fact, some functions will be missing or different. For example ramadish doesn't come with `addIndex`, because `map` and `reduce` provides indexes out of the box in ramadish. Another example is ramdas `chain` - it's named `flatMap` in ramadish, just because that's a more common name imo.
+Apart from curried-only functions (described in the introduction), armade is still under development and some functions will be missing. Feel free to open an issue if your favourite utility isn't in here yet! However the goal isn't, as described, to be a drop-in replacement for ramda. In fact, some functions will be missing or different. For example armade doesn't come with `addIndex`, because `map` and `reduce` provides indexes out of the box in armade. Another example is ramdas `chain` - it's named `flatMap` in armade, just because that's a more common name imo.
 
 ## Docs
 
