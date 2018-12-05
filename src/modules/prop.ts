@@ -9,7 +9,7 @@ export const prop = <
   K extends string | number | keyof TObject
 >(
   key: K,
-) => (obj: TObject): TObject[K] => {
+) => (obj: TObject): TObject[K] | undefined => {
   if (not(isNil(obj))) {
     return obj[key]
   }

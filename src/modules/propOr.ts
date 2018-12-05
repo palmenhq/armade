@@ -17,5 +17,5 @@ export const propOr = <
     return alternative
   }
 
-  return prop<TObject, K>(key)(obj)
+  return prop<TObject, K>(key)(obj)!
 }
