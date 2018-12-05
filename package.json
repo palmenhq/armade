@@ -1,5 +1,11 @@
 {
   "name": "armade",
+  "license": "MIT",
+  "repository": "https://github.com/palmfjord/armade",
+  "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {},
   "scripts": {
     "build:cjs": "tsc --module commonjs --outDir ./dist",
